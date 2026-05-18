@@ -50,7 +50,7 @@ stroke-prediction-project/
 ├── outputs/
 │   └── figures/
 │       ├── Stroke_Analysis_Summary.png    # 2x2 Master Dashboard (All-in-one)
-│       ├── loss_convergence.png           # Math Module: MSE Loss curve
+│       ├── gradient_descent_convergence.png           # Math Module: MSE Loss curve
 │       ├── Age_stroke_dist.png            # Pandas Q5: Histogram & Countplot
 │       ├── Correlation_heatmap.png        # Pandas Q9: Pure Numeric Heatmap
 │       └── Glucose_boxplot.png            # Pandas Q9: Target variable analysis
@@ -110,7 +110,7 @@ Generated visualization outputs include:
 | Visualization | Description |
 | :--- | :--- |
 | `Stroke_Analysis_Summary.png` | **Master Dashboard 2x2** compiling all project visual insights |
-| `loss_convergence.png` | Gradient Descent convergence (MSE Train & Test) |
+| `gradient_descent_convergence.png` | Gradient Descent convergence (MSE Train & Test) |
 | `Age_stroke_dist.png` | Stroke distribution by age and class imbalance |
 | `Correlation_heatmap.png` | Correlation between numeric variables |
 | `Glucose_boxplot.png` | Glucose distribution analysis across stroke status |
@@ -125,3 +125,40 @@ Ensure you have Python 3.8+ and the `pip` package manager installed.
 Install dependencies:
 ```bash
 pip install -r requirements.txt
+```
+---
+
+## ▶️ Execution Pipeline
+
+Run each module independently from the project root directory.
+
+### Run Module 1 — NumPy Operations
+```bash
+python src/numpy_tasks.py
+```
+
+Run Module 2 — Mathematics & Optimization
+```bash
+python src/math_tasks.py
+```
+
+Run Module 3 — Pandas EDA & Visualization
+```bash
+python src/pandas_tasks.py
+```
+
+---
+
+## 📓 Jupyter Notebook
+To explore the interactive notebook and generate the Master Dashboard:
+```bash
+jupyter notebook notebooks/analysis.ipynb
+```
+The notebook acts as the presentation layer, dynamically importing the src modules to compute logic, run algorithms, and stitch together the final 2x2 analytical framework.
+
+--- 
+
+## 📈 Technologies Used
+- Python (Pandas, NumPy, Matplotlib, Seaborn)
+- Mathematical Foundations (Linear Algebra, Calculus, Probability)
+- Development Tools (Jupyter, Git, VS Code)

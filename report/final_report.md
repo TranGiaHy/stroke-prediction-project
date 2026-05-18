@@ -1,7 +1,7 @@
 # BÁO CÁO PHÂN TÍCH CHUYÊN SÂU VÀ DỰ ĐOÁN NGUY CƠ ĐỘT QUỴ
 **Dự án:** Nghiên cứu Phân tích Hệ số Sức khỏe & Tối ưu hóa Mô hình Dự đoán Nguy cơ Đột quỵ  
 **Tác giả:** Trần Gia Hy  
-**Chuyên ngành:** Khoa học Dữ liệu - HUFLIT  
+**Chuyên ngành:** Khoa học Dữ liệu
 **Chương trình:** AI Engineer Foundation Program - Quanskill  
 
 ---
@@ -52,7 +52,7 @@ $$J(\mathbf{w}) = \frac{1}{2N} \sum_{i=1}^{N} \left( h_\mathbf{w}(x^{(i)}) - y^{
 Đạo hàm riêng (Phần tử Gradient) được cập nhật liên tục qua từng vòng lặp (Epochs):
 $$\mathbf{w}_j := \mathbf{w}_j - \alpha \frac{1}{N} \sum_{i=1}^{N} \left( h_\mathbf{w}(x^{(i)}) - y^{(i)} \right) x_j^{(i)}$$
 
-Đồ thị `loss_convergence.png` cho thấy tốc độ hội tụ ổn định, hàm mất mát trên cả tập huấn luyện (Train) và tập kiểm thử (Test) tiệm cận về điểm cực tiểu toàn cục mà không xảy ra hiện tượng Overfitting.
+Đồ thị `gradient_descent_convergence.png` cho thấy tốc độ hội tụ ổn định, hàm mất mát trên cả tập huấn luyện (Train) và tập kiểm thử (Test) tiệm cận về điểm cực tiểu toàn cục mà không xảy ra hiện tượng Overfitting.
 
 ---
 
@@ -82,7 +82,7 @@ Phân tích phân phối tần suất lớp mục tiêu (`stroke`) chỉ ra hi�
 ### Đề xuất chiến lược xây dựng mô hình ML tiếp theo:
 1. **Tiền xử lý mẫu:** Bắt buộc áp dụng thuật toán **SMOTE (Synthetic Minority Over-sampling Technique)** để sinh mẫu nhân tạo cho nhóm thiểu số, hoặc áp dụng kỹ thuật **Under-sampling** có kiểm soát cho nhóm đa số để tránh mô hình bị thiên vị (Bias).
 2. **Lựa chọn thuật toán:** Ưu tiên các mô hình cây quyết định phân cấp (Ensemble Learning) như **Random Forest** hoặc **XGBoost**, cấu hình tham số trọng số lớp (`class_weight='balanced'`).
-3. **Chỉ số đánh giá:** Tuyệt đối không dùng chỉ số *Accuracy* (Độ chính xác tổng thể). Thay vào đó, phải dùng **F1-Score**, **Recall** (đảm bảo không bỏ sót ca bệnh thực tế) và chỉ số **AUC-ROC**.
+3. **Chỉ số đánh giá:** Tuyệt đối không dùng chỉ số *Accuracy* (Độ chính xác tổng thể). Thay vào đó, dùng **F1-Score**, **Recall** (đảm bảo không bỏ sót ca bệnh thực tế) và chỉ số **AUC-ROC**.
 
 ---
 
